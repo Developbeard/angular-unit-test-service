@@ -26,7 +26,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/ng-testing-component'),
+      dir: require('path').join(__dirname, './coverage/ng-testing-services'),
       subdir: '.',
       reporters: [
         { type: 'html' },
@@ -36,7 +36,7 @@ module.exports = function (config) {
         global: {
           statements: 80,
           branches: 80,
-          functions: 80,
+          funtions: 80,
           lines: 80
         }
       }
@@ -46,13 +46,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers:['Chrome', 'ChromeHeadless', 'ChromeHeadlessCI'],
-    customLauchers:{
-      ChromeHeadlessCI: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
-      }
-    },
+    browsers: ['ChromeHeadless'],
     singleRun: false,
     restartOnFileChange: true
   });

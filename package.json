@@ -9,7 +9,7 @@
     "test-b": "ng test",
     "test-nw": "ng test --no-watch",
     "test-cc": "ng test --code-coverage",
-    "test": "ng test"
+    "test": "ng test --no-watch --code-coverage"
   },
   "private": true,
   "dependencies": {
