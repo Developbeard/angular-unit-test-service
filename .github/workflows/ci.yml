@@ -7,11 +7,10 @@ jobs:
       - name: Clone
         uses: actions/checkout@v2
       - name: Node Setup
-        uses: actions/setup-node@2
-        width:
+        uses: actions/setup-node@v2
+        with:
           node-version: 14.x
       - name: Install
         run: npm ci
       - name: Run test
-        run: ng test --no-watch --code-coverage --browsers=ChromeHeadlessCI
-
+        run: npm run test-b -- --no-watch --code-coverage --browsers=ChromeHeadlessCI
